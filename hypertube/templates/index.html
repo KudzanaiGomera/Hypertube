@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-container text-c animated flipInX">
+        <h3 class="navbar-brand" style="color: red; text-transform:uppercase;">Welcome <b style="color: white; text-transform:uppercase;">to </b><b style="color: #007bff; text-transform:uppercase;">hypertube</b></h3>
+        {% for i in title %}
+            {{i}}
+        {% endfor %}
+        <div class="container-content">
+            <form class="margin-t" method="POST" action="">
+                <div>
+                    <h1 class="logo-badge text-whitesmoke"><span class=""><img src="../static/images/hypertube.png" alt="Sorry this image failed to load...."></span></h1>
+                </div>
+            </form>
+        </div>
+</div>
+{% endblock %}

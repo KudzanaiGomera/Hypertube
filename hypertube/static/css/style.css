@@ -1,0 +1,1078 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("../images/dark-planingwood.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar {
+  font-size: 14px;
+  background-image: url("../images/dark-planingwood.png");
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-brand {
+  color: white;
+  padding-left: 0;
+  font-size: 20px;
+  padding-right: 50px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-brand b {
+  color: #007bff;
+}
+.navbar .navbar-nav a {
+  font-size: 96%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+.navbar .navbar-nav a.active {
+  color: #007bff !important;
+  background: transparent !important;
+}
+.search-box input.form-control,
+.search-box .btn {
+  font-size: 14px;
+  border-radius: 2px !important;
+}
+.search-box .input-group-append {
+  padding-left: 4px;
+}
+.search-box input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(240, 79, 1, 0.2);
+}
+.search-box .btn-danger,
+.search-box .btn-danger:active {
+  font-weight: bold;
+  background: #007bff !important;
+  border-color: #007bff;
+  text-transform: uppercase;
+  min-width: 90px;
+}
+.search-box .btn-danger:hover,
+.search-box .btn-danger:focus {
+  background: #007bff !important;
+  box-shadow: 0 0 8px rgba(240, 79, 1, 0.2);
+}
+.search-box .btn span {
+  transform: scale(0.9);
+  display: inline-block;
+}
+.navbar .nav-item.open > a {
+  background: none !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.navbar .dropdown-menu a,
+.navbar .dropdown-menu a:active {
+  color: #777;
+  padding: 8px 20px;
+  font-size: 13px;
+  background: #fff;
+}
+.navbar .dropdown-menu a:hover,
+.navbar .dropdown-menu a:focus {
+  color: #333;
+  background: #f8f9fa;
+}
+@media (min-width: 992px) {
+  .form-inline .input-group .form-control {
+    width: 225px;
+  }
+}
+@media (max-width: 992px) {
+  .form-inline {
+    display: block;
+  }
+}
+
+/*login form*/
+
+/* Text Align */
+.text-c {
+  text-align: center;
+}
+.text-l {
+  text-align: left;
+}
+.text-r {
+  text-align: right;
+}
+.text-j {
+  text-align: justify;
+}
+
+/* Text Color */
+.text-whitesmoke {
+  color: whitesmoke;
+}
+.text-darkyellow {
+  color: #007bff;
+}
+
+/* Lines */
+
+.line-b {
+  border-bottom: 1px solid #ffeb3b !important;
+}
+
+/* Buttons */
+.button {
+  border-radius: 3px;
+}
+.form-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #e6e6e6;
+}
+.form-button:hover,
+.form-button:focus,
+.form-button:active,
+.form-button.active,
+.form-button:active:focus,
+.form-button:active:hover,
+.form-button.active:hover,
+.form-button.active:focus {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #e6e6e6;
+}
+.button-l {
+  width: 100% !important;
+}
+
+/* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
+
+.margin-g {
+  margin: 15px;
+}
+.margin-g-sm {
+  margin: 10px;
+}
+.margin-g-md {
+  margin: 20px;
+}
+.margin-g-lg {
+  margin: 30px;
+}
+
+.margin-l {
+  margin-left: 15px;
+}
+.margin-l-sm {
+  margin-left: 10px;
+}
+.margin-l-md {
+  margin-left: 20px;
+}
+.margin-l-lg {
+  margin-left: 30px;
+}
+
+.margin-r {
+  margin-right: 15px;
+}
+.margin-r-sm {
+  margin-right: 10px;
+}
+.margin-r-md {
+  margin-right: 20px;
+}
+.margin-r-lg {
+  margin-right: 30px;
+}
+
+.margin-t {
+  margin-top: 15px;
+}
+.margin-t-sm {
+  margin-top: 10px;
+}
+.margin-t-md {
+  margin-top: 20px;
+}
+.margin-t-lg {
+  margin-top: 30px;
+}
+
+.margin-b {
+  margin-bottom: 15px;
+}
+.margin-b-sm {
+  margin-bottom: 10px;
+}
+.margin-b-md {
+  margin-bottom: 20px;
+}
+.margin-b-lg {
+  margin-bottom: 30px;
+}
+
+/* Bootstrap Form Control Extension */
+
+.form-control,
+.border-line {
+  background-color: #5f5f5f;
+  background-image: none;
+  border: 1px solid #424242;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}
+.form-control:focus,
+.border-line:focus {
+  border-color: #ffeb3b;
+  background-color: #616161;
+  color: #e6e6e6;
+}
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+}
+.form-control::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+/* Container */
+
+.container-content {
+  background-image: url("../images/dark-planingwood.png");
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #007bff;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+
+/* Backgrounds */
+
+.main-bg {
+  background: #424242;
+  background: linear-gradient(#424242, #212121);
+  background-image: url("../images/dark-planingwood.png");
+  color: white;
+}
+
+/* Login & Register Pages*/
+
+.login-container {
+  max-width: 400px;
+  z-index: 100;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.login.login-container {
+  width: 300px;
+}
+.wrapper.login-container {
+  margin-top: 140px;
+}
+.logo-badge {
+  color: #e6e6e6;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -10px;
+  margin-bottom: 0;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  margin-top: 40px;
+  bottom: 0;
+  clear: both;
+  position: relative;
+  height: 100px;
+  background-image: url("../images/dark-planingwood.png");
+  text-align: center;
+  top: 50px;
+}
+
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img {
+  border: none;
+}
+
+.wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.content {
+  float: left;
+  width: 100%;
+  background-image: url("../images/dark-planingwood.png");
+}
+/* swiper */
+
+.homeslider > .swiper-container > .swiper-wrapper > .swiper-slide > .caption {
+  color: #ffffff;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.homeslider
+  > .swiper-container
+  > .swiper-wrapper
+  > .swiper-slide
+  > .caption
+  > .captioninside {
+  top: 100px;
+  left: 50px;
+  position: absolute;
+  text-align: left;
+  max-width: 40%;
+}
+.homeslider
+  > .swiper-container
+  > .swiper-wrapper
+  > .swiper-slide
+  > .caption
+  > .captioninside
+  h3 {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 0;
+  display: block;
+}
+.homeslider
+  > .swiper-container
+  > .swiper-wrapper
+  > .swiper-slide
+  > .caption
+  > .captioninside
+  p {
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
+.playbutton {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #c10e0e;
+  display: inline-block;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.homeslider
+  > .swiper-container
+  > .swiper-pagination
+  > .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+.homeslider
+  > .swiper-container
+  > .swiper-pagination
+  > .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.homeslider {
+  float: left;
+  width: 100%;
+}
+.homeslider > .swiper-container {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  margin: 0px auto;
+  position: relative;
+}
+.homeslider > .swiper-container > .swiper-wrapper > .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.homeslider > .swiper-container > .swiper-wrapper > .swiper-slide > img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.recentlider > .swiper-container {
+  width: 100%;
+  height: 500px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.nextdirection {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  color: #fff;
+  cursor: pointer;
+}
+.nextdirection img {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 8px;
+}
+
+.leftdirection {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  color: #fff;
+  cursor: pointer;
+}
+.leftdirection img {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 7px;
+}
+.swiper-button-disabled {
+  opacity: 0.3;
+}
+.recentlider > .swiper-container > .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide > a > img {
+  max-width: 100%;
+}
+.panel {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+}
+.panel h2 {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.tags {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0 100px 0;
+}
+.tags ul {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.tags ul li {
+  display: inline;
+  list-style: none;
+  font-size: 12px;
+  padding: 0 10px;
+  background-image: url("../images/dark-planingwood.png");
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.hometitle {
+  position: absolute;
+  bottom: 3px;
+  line-height: 1.3;
+  left: 0;
+  right: 0;
+  padding: 7px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.single {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+.trailer {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 20px 0;
+  background-image: url("../images/dark-planingwood.png");
+  padding: 10px;
+  box-shadow: transparent;
+}
+.trailer h3 {
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+}
+.trailer_frame {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 35%;
+  padding-top: 25px;
+  height: 0;
+}
+.trailer_frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.movie {
+  float: left;
+  width: calc(100% - 20px);
+  background-image: url("../images/dark-planingwood.png");
+  padding: 10px;
+  box-shadow: transparent;
+}
+.movie img {
+  float: left;
+}
+.movie ul {
+  float: left;
+  margin: 0 20px;
+  width: calc(100% - 590px);
+}
+.movie ul li {
+  float: left;
+  display: block;
+  clear: both;
+  color: #fff;
+  padding: 0 0 10px 0;
+  line-height: 1.4;
+}
+.movie ul li:first-child {
+  font-weight: bold;
+  font-size: 22px;
+}
+.movie ul li a {
+  color: #c22026;
+  text-decoration: none;
+}
+
+.links {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 20px 0;
+  background-image: url("../images/dark-planingwood.png");
+  padding: 10px;
+  box-shadow: transparent;
+}
+.links h3 {
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  padding: 0 10px;
+}
+.dlinks,
+.wlinks {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+.dlinks li,
+.wlinks li {
+  display: inline;
+  /* float: left; */
+  margin: 0px 10px 5px 0px;
+}
+.dlinks li a,
+.wlinks li a {
+  float: left;
+  padding: 7px 10px;
+  background-color: #c22026;
+  font-size: 14px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: transparent;
+}
+
+.related {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 0 0 20px 0;
+  background-image: url("../images/dark-planingwood.png");
+  padding: 10px;
+  box-shadow: transparent;
+}
+.related h3 {
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  width: calc(100% - 20px);
+}
+.relatemovie {
+  float: left;
+  width: calc(16.6% - 15px);
+  margin: 0 5px 10px 10px;
+  position: relative;
+}
+.relatemovie img {
+  max-width: 100%;
+  width: 100%;
+}
+.relatedname {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  line-height: 1.4;
+  font-size: 14px;
+  box-shadow: transparent;
+}
+.relatemovie a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.centered {
+  max-width: 1024px;
+  width: 100%;
+  margin: 70px auto;
+}
+.centered h3 {
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  width: calc(100% - 20px);
+}
+.movies {
+  float: left;
+  width: 100%;
+}
+.mov {
+  float: left;
+  width: calc(20% - 20px);
+  padding: 10px 10px 0 10px;
+  position: relative;
+}
+.mov img {
+  max-width: 100%;
+}
+.mov:hover img {
+  opacity: 0.7;
+}
+.movietitle {
+  position: absolute;
+  line-height: 1.3;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  padding: 10px;
+  box-shadow: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.pagination {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+}
+.pagination ul {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+}
+.pagination ul li {
+  display: inline;
+  list-style: none;
+  /* float: left; */
+  margin-left: 3px;
+  /* margin-bottom: 3px; */
+}
+.pagination ul li a {
+  text-decoration: none;
+  float: left;
+  padding: 7px 10px;
+  background-color: #c22026;
+  color: #fff;
+}
+.menuactive {
+  background-color: #6f0004 !important;
+}
+.pagination ul li:hover a {
+  background-color: #6f0004;
+}
+
+.textcontent {
+  float: left;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+}
+.textcontent p {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact {
+  float: left;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+}
+#myForm {
+  float: left;
+  width: 100%;
+}
+#myForm input[type="text"] {
+  float: left;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: #cecece;
+}
+#myForm textarea {
+  float: left;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  height: 150px;
+  outline: none;
+  background-color: #cecece;
+}
+#myForm label {
+  float: left;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+#myForm input[type="submit"] {
+  float: left;
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #fff;
+  border: none;
+  background-color: #c22026;
+  outline: none;
+  cursor: pointer;
+}
+.success {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #8bc34a;
+  color: #fff;
+  padding: 10px 0;
+}
+.error {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 0;
+}
+
+@media all and (max-width: 1024px) {
+  .toggle {
+    display: block;
+  }
+  .search {
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .menu > ul {
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+  }
+  .menu > ul > li {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #252525;
+  }
+  .menu > ul > li:last-child {
+    border: none;
+  }
+  .menu > ul > li > a {
+    padding: 10px;
+  }
+  .menu > ul > li > ul {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    float: left;
+  }
+  .menu > ul > li > ul > li > a {
+    padding: 10px;
+  }
+  .mobsearch {
+    display: block;
+  }
+  .mobform {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .mobsearchfield {
+    float: left;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    margin: 10px;
+    padding: 5px 10px;
+    background: transparent;
+    outline: none;
+  }
+  .nextdirection {
+    width: 20px;
+  }
+  .nextdirection img {
+    right: 4px;
+    max-width: 15px;
+  }
+  .leftdirection {
+    width: 20px;
+  }
+  .leftdirection img {
+    left: 4px;
+    max-width: 15px;
+  }
+  .movie ul {
+    width: calc(100% - 290px);
+  }
+}
+
+@media all and (max-width: 786px) {
+  .mov {
+    width: calc(25% - 20px);
+  }
+  .homeslider
+    > .swiper-container
+    > .swiper-wrapper
+    > .swiper-slide
+    > .caption
+    > .captioninside {
+    top: 50px;
+    left: 10px;
+    max-width: 50%;
+  }
+  .relatemovie {
+    float: left;
+    width: calc(33.3% - 15px);
+    margin: 0 5px 10px 10px;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .mov {
+    width: calc(33.3% - 10px);
+    padding: 10px 5px 0 5px;
+  }
+  .movietitle {
+    right: 5px;
+    left: 5px;
+  }
+  .movie img {
+    float: none;
+    max-width: 100px;
+    width: 100%;
+  }
+  .movie {
+    text-align: center;
+  }
+  .movie ul {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .movie ul li {
+    float: none;
+  }
+}
+
+.dropzone {
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #6f0004;
+  color: #6f0004;
+  line-height: 300px;
+  text-align: center;
+}
+
+.dropzone.dragover {
+  border-color: #007bff;
+  color: #007bff;
+
+}

@@ -1,0 +1,75 @@
+{% extends 'movies.html' %}
+
+{% block content %}
+        <main class="content">
+                <div class="single">
+
+                        <section class="movie">
+                                <img src="{{object.image}}">
+                                <ul>
+                                        <li>{{object}}</li>
+                                        <li>{{object.description}}</li>
+                                        <h6 style="color: #007bff !important;">Genre:</h6>
+                                        <li><a href="">Adventure</a>, <a href="">Drama</a>, <a href="">Romance</a></li>
+                                        <h6 style="color: #007bff !important;">Cast:</h6>
+                                        <li><a href=""></a>{{object.cast}}</li>
+                                        <h6 style="color: #007bff !important;">Runtime:</h6>
+                                        <li><a href=""></a>{{object.runtime}} min</li>
+                                        <h6 style="color: #007bff !important;">Rating:</h6>
+                                        <li><a href=""></a><span class="fa fa-star checked" style="color:#FF9529;"></span>&nbsp{{object.rating}}</li>
+                                </ul>
+                        </section>
+                        <section class="links">
+                                <h3>Links</h3>
+                                <ul class="dlinks">
+                                        <li><a href="{{object.movie_torrent_link}}" >Download Torrent</a></li>
+
+                                        {% for link in links %}
+                                                {% if link.type == 'D' %}
+                                                        <li><a href="{{link.link}}">link{{forloop.counter}}</a></li>
+                                                {% endif %}
+                                        {% endfor %}
+                                </ul>
+                                <ul class="wlinks">
+                                        <li><a href="{% url 'watch' %}">Watch</a></li>
+                                        {% for link in links %}
+                                                {% if link.type == 'W' %}
+                                                        <li><a href="{{link.link}}">link{{forloop.counter}}</a></li>
+                                                {% endif %}
+                                        {% endfor %}
+                                </ul>
+                        </section>
+
+                        <section class="related">
+                                <h3>You may also like</h3>
+                                {% for movie in related_movies %}
+                                
+                                        <div class="relatemovie">
+                                                <a href="{% url 'movie_detail' movie.slug %}"><img src="{{movie.image}}"></a>
+                                                <a href="{% url 'movie_detail' movie.slug %}"><span class="relatedname" style="background-color: transparent;">{{movie.title}}</span></a>
+                                        </div>
+
+                                {% endfor %}
+
+                        </section>
+
+                        <section class="related">
+                                <h2>Comments...</h2>
+                                <br>
+                                <a href="{% url 'add_comment' movie.slug %}">Leave A Comment</a>
+                                <br><br>
+                                {% for comment in comment.all %}
+                                        <strong style="color: red;">{{comment.user.username}}</strong>
+                                        <br>
+                                        <p style="color: white;">{{comment.comment}}</p>
+                                        <br>
+                                {% empty %}
+                                <p>There are no comments</P>
+                                {% endfor %}
+                                <br>
+                                <br><br>
+                        </section>
+                </div>
+        </main>
+
+{% endblock %}  

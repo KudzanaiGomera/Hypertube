@@ -1,0 +1,16 @@
+{% extends 'movies.html' %}
+
+{% block content %}
+        <main class="content">
+                <div class="single" id="fomu">
+                    <br><br>
+                    <form method="POST" action="" enctype="multipart/form-data" style="color: black;">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <input type="file" name="myfile">
+                        <input class="btn btn-primary" value="Upload Torrent file" type="submit" name="Update Information">
+                    </form>
+                </div>
+        </main>
+
+{% endblock %}  

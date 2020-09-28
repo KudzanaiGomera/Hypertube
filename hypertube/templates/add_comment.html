@@ -1,0 +1,16 @@
+{% extends 'movies.html' %}
+
+{% block content %}
+<div class="login-container text-c animated flipInX">
+        <p class="text-whitesmoke">Add New Comment</p>
+    <div class="container-content">
+        <form class="margin-t" method="POST" action="">
+            {% csrf_token %}
+            {{ u_form.as_p }}
+            {{ form.as_p }}
+            <button type="submit" class="form-button button-l margin-b">Add Comment</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}  

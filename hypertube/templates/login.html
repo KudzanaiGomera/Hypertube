@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .icon-42{
+        background-image : url(../static/images/42.png);
+        background-size: cover;
+        display: inline-block;
+        height: 27px;
+        margin: 8px 11px 4px 8px;
+        width: 38px;
+    }
+    .google{
+        background-image : url(../static/images/google.png);
+        background-size: cover;
+        display: inline-block;
+        height: 29px;
+        margin: 8px 11px 4px 8px;
+        width: 30px;
+    }
+    .github{
+        background-image : url(../static/images/github.png);
+        background-size: cover;
+        display: inline-block;
+        height: 29px;
+        margin: 8px 11px 4px 8px;
+        width: 30px;
+    }
+</style>
+<div class="login-container text-c animated flipInX">
+    <div>
+        <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
+    </div>
+        <p class="text-whitesmoke">Sign In</p>
+    <div class="container-content">
+        <form class="margin-t" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="form-button button-l margin-b">Sign In</button>
+            <br>
+        </form>
+        <p class="text-darkyellow" style="color: red;"> Or Sign In With</p>
+            <a href="{% url 'social:begin' 'github' %}">
+                <button type="submit" class="btn btn-default"><i class="github" aria-hidden="true"></i></button>
+            </a>
+            <a href="{% url 'social:begin' 'google-oauth2' %}">
+                <button type="submit" class="btn btn-default"><i class="google" aria-hidden="true"></i></button>
+            </a>
+            <a href="{% url 'social:begin' 'api.intra.42.fr' %}">
+                <button type="submit" class="btn btn-default"><i class="fab icon-42" aria-hidden="true"></i></button>
+            </a>
+            <br>
+        <a class="text-darkyellow" href="{% url 'reset_password' %}" style="font-size: 20px;"><small>Forgot your password?</small></a>
+            <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
+            <a class="text-darkyellow" href="{% url 'register' %}" style="font-size: 20px;"><small>Sign Up</small></a>
+        {% for message in messages %}
+        <p style="color: green;">
+            {{ message}}
+        </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Hypertube</title>
+            <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+            <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+
+            <!-- Link Swiper's CSS -->
+            <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" type="text/css">
+            <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type="text/css">
+
+            <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+            <!-- Swiper JS -->
+            <script src="{% static 'js/swiper.min.js' %}"></script>
+	        <script src="{% static 'js/script.js' %}"></script>
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans"/>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+            <!-- Initialize Swiper -->
+<script>
+    $(document).ready(function(){
+
+
+        var swiper = new Swiper('.homeslider > .swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            preventClicks:false,
+            preventClicksPropagation:false,
+            effect:'fade',
+            breakpoints: {
+                320: {
+                    height:200
+                },
+
+                480: {
+                    height:300
+                },
+
+                768: {
+                    height:400
+                },
+                1024: {
+                    height:500
+                }
+            }
+        });
+
+        var recentswiper = new Swiper('.recentslider > .swiper-container', {
+            nextButton: '.recent-next',
+            prevButton: '.recent-prev',
+            slidesPerView: 8,
+            paginationClickable: true,
+            preventClicks:false,
+            preventClicksPropagation:false,
+            spaceBetween: 10,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 5
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 10
+                }
+            }
+        });
+
+        var mostswiper = new Swiper('.mostslider > .swiper-container', {
+            nextButton: '.most-next',
+            prevButton: '.most-prev',
+            slidesPerView: 8,
+            paginationClickable: true,
+            preventClicks:false,
+            preventClicksPropagation:false,
+            spaceBetween: 10,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 5
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 10
+                }
+            }
+        });
+
+        var topswiper = new Swiper('.topslider > .swiper-container', {
+            nextButton: '.top-next',
+            prevButton: '.top-prev',
+            slidesPerView: 8,
+            paginationClickable: true,
+            preventClicks:false,
+            preventClicksPropagation:false,
+            spaceBetween: 10,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 5
+                },
+
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 5
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 10
+                }
+            }
+        });
+
+    });
+
+    
+</script>
+    </head>
+    <body class="main-bg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="{% url 'index' %}" class="navbar-brand">Hyper<b>Tube</b></a>  		
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collection of nav links, forms, and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+                <div class="navbar-nav">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'home_view' %}" class="nav-item nav-link fa fa-home">Home</a>	
+                    <a href="{% url 'profile' %}" class="nav-item nav-link fa fa-user">Profile</a>			
+                    <a href="{% url 'movie_list' %}" class="nav-item nav-link fa fa-film">Movies</a>
+                    <a href="{% url 'videoplayer' %}" class="nav-item nav-link fa fa-film">VideoPlayer</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle fa fa-fill">Genres</a>
+                        <div class="dropdown-menu">					
+                            <a href="{% url 'movie_category' 'action' %}" class="dropdown-item">Action</a>
+                            <a href="{% url 'movie_category' 'comedy' %}" class="dropdown-item">Comedy</a>
+                            <a href="{% url 'movie_category' 'drama' %}" class="dropdown-item">Drama</a>
+                            <a href="{% url 'movie_category' 'romance' %}" class="dropdown-item">Romance</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle fa fa-fill">Year</a>
+                        <div class="dropdown-menu">					
+                            <a href="{% url 'movie_year' '2020' %}" class="dropdown-item">2020</a>
+                            <a href="{% url 'movie_year' '2019' %}" class="dropdown-item">2019</a>
+                            <a href="{% url 'movie_year' '2018' %}" class="dropdown-item">2018</a>
+                            <a href="{% url 'movie_year' '2017' %}" class="dropdown-item">2017</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle fa fa-fill">Language</a>
+                        <div class="dropdown-menu">					
+                            <a href="{% url 'movie_language' 'english' %}" class="dropdown-item">English</a>
+                            <a href="{% url 'movie_language' 'german' %}" class="dropdown-item">German</a>
+                        </div>
+                    </div>
+                    <form class="navbar-form form-inline ml-auto" method="GET" action="{% url 'search' %}">
+                        <div class="input-group search-box">
+                            <input type="text" name="query" value="{{ request.GET.query }}" class="form-control">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger"><span>Search</span></button>
+                            </div>
+                        </div>
+                    </form>
+                    <span class="nav-item nav-link fa fa-user" style="color: #007bff; float:right;">{{request.user}} </span>
+                    <a href="{% url 'logoutUser' %}" class="nav-item nav-link fa fa-sign-out" style="color: #007bff; float:right;">Logout</a>	
+                {% else %}
+                        <a href="{% url 'login2' %}" class="nav-item nav-link fa fa-sign-in">Login</a>
+                        <a href="{% url 'register' %}" class="nav-item nav-link fa fa-sign-up">Signup</a>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+             <!-- Swiper -->
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <footer id="sticky-footer">
+            <div class="container text-center">
+              <small>Copyright &copy; Hypertube</small>
+            </div>
+        </footer>
+    </body>
+</html>
