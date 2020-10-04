@@ -62,6 +62,7 @@ class Movie(models.Model):
    movie_torrent_link = models.URLField()
    rating = models.FloatField(null=True)
    runtime = models.IntegerField(null=True)
+   Watched=models.BooleanField(default=False)
    created = models.DateTimeField(default=timezone.now)
 
    def save(self, *args, **kwargs):
@@ -87,7 +88,7 @@ class MovieLinks(models.Model):
 
 class Comment(models.Model):
    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
-   movie = models.OneToOneField(Movie, related_name='comments', on_delete=models.CASCADE, null=True)
+   movie = models.ForeignKey(Movie, related_name='comments', on_delete=models.CASCADE)
    comment = models.TextField()
    date_added = models.DateTimeField(auto_now_add=True)
 

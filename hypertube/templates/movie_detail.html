@@ -6,6 +6,15 @@
 
                         <section class="movie">
                                 <img src="{{object.image}}">
+                                <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                                        <li role="presentation" class="active"><a href="{% url 'watched' movie.slug%}">
+                                          {% if movie.Watched %}
+                                          Mark As Unwatched
+                                          {% else %}
+                                          Mark As Watched
+                                          {% endif %}
+                                        </a></li>
+                                    </ul>
                                 <ul>
                                         <li>{{object}}</li>
                                         <li>{{object.description}}</li>
@@ -15,8 +24,12 @@
                                         <li><a href=""></a>{{object.cast}}</li>
                                         <h6 style="color: #007bff !important;">Runtime:</h6>
                                         <li><a href=""></a>{{object.runtime}} min</li>
-                                        <h6 style="color: #007bff !important;">Rating:</h6>
+                                        <h6 style="color: #007bff !important;">Year:</h6>
+                                        <li><a href=""></a>{{object.year_of_production}}</li>
+                                        <h6 style="color: #007bff !important;">IMDB Rating:</h6>
                                         <li><a href=""></a><span class="fa fa-star checked" style="color:#FF9529;"></span>&nbsp{{object.rating}}</li>
+                                        <h6 style="color: #007bff !important;">Watched:</h6>
+                                        <li><a href=""></a>{% if movie.Watched %}Yes{% else %}No{% endif %}</li>
                                 </ul>
                         </section>
                         <section class="links">

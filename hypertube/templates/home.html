@@ -2,93 +2,34 @@
 <!-- {% load static %} -->
 
 {% block content %}
-                  <!-- Swiper -->
-                  <div class="homeslider">
-                    <div class="swiper-container">
-    
-                        <div class="swiper-wrapper">
-    
-                            {% for movie in  slider_movie %}
-    
-                                <div class="swiper-slide">
-                                    {% if movie.banner %}
-                                        <img src="{{ movie.banner.url }}">
-                                    {% endif %}
-                                
-                                    <div class="caption">
-                                        <div class="captioninside">
-                                            <h3>{{movie.title}}</h3>
-                                            <p>{{movie.description}}</p>
-                                            <a href="{% url 'movie_detail' movie.slug %}" class="playbutton">Play</a>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            {% endfor%}
-                            
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
 		<main class="content">
 			<section class="panel">
-				<h2>Recently Added</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input name="year_of_production" type="checkbox" value="year_of_production" style="margin-left: 22px;">
+                    <button class="btn btn-primary" type="submit" name="order">Order_by_Popularity</button>
+                </form>
+                <br><br>
+                <h2>Recently Added</h2>
 				<div class="recentslider">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							{% for movie in object_list %}
 
-							    <div class="swiper-slide"><a href="{% url 'movie_detail' movie.slug %}"><img src="{{movie.image}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
+							    <div class="swiper-slide"><a href="{% url 'movie_detail' movie.slug %}">
+                                    <img src="{{movie.image}}">
+                                    <h3 class="hometitle">{{movie.title}}</h3>
+                                    <h2 class="hometitle2"> {{ movie.year_of_production }}</h2>
+                                    </a>
+                                </div>
                             {% endfor %}
 							
-							<div class="swiper-slide"><a href="mostwatched.html"><img src="{% static 'img/others.png' %}"></a></div>
+							<div class="swiper-slide"><a href="#"><img src="{% static 'img/others.png' %}"></a></div>
 						</div>
 						<div class="nextdirection recent-next"><img src="{% static 'img/right-arrow.svg' %}"> </div>
 						<div class="leftdirection recent-prev"><img src="{% static 'img/left-arrow.svg' %}"> </div>
 					</div>
 				</div>
 			</section>
-
-			<section class="panel">
-				<h2>Most Watched</h2>
-				<div class="mostslider">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-                            {% for movie in object_list %}
-
-							    <div class="swiper-slide"><a href="{% url 'movie_detail' movie.slug %}"><img src="{{movie.image}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
-                            {% endfor %}
-
-							<div class="swiper-slide"><a href="#"><img src="{% static 'img/others.png' %}"></a></div>
-						</div>
-						<div class="nextdirection most-next"><img src="{% static 'img/right-arrow.svg' %}"> </div>
-						<div class="leftdirection most-prev"><img src="{% static 'img/left-arrow.svg' %}"> </div>
-						<!-- Add Pagination -->
-					</div>
-				</div>
-			</section>
-
-			<section class="panel">
-				<h2>Top Rated</h2>
-				<div class="topslider">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-                            {% for movie in object_list %}
-                            
-							    <div class="swiper-slide"><a href="{% url 'movie_detail' movie.slug %}"><img src="{{movie.image}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
-                            
-                            {% endfor %}
-
-							<div class="swiper-slide"><a href="mostwatched.html"><img src="{% static 'img/others.png' %}"></a></div>
-						</div>
-						<div class="nextdirection top-next"><img src="{% static 'img/right-arrow.svg' %}"> </div>
-						<div class="leftdirection top-prev"><img src="{% static 'img/left-arrow.svg' %}"> </div>
-						<!-- Add Pagination -->
-					</div>
-				</div>
-			</section>
-
-			
         </main>
 {% endblock %}

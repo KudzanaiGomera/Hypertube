@@ -160,7 +160,7 @@
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                 <div class="navbar-nav">
                     {% if request.user.is_authenticated %}
-                    <a href="{% url 'home_view' %}" class="nav-item nav-link fa fa-home">Home</a>	
+                    <a href="{% url 'home' %}" class="nav-item nav-link fa fa-home">Home</a>	
                     <a href="{% url 'profile' %}" class="nav-item nav-link fa fa-user">Profile</a>			
                     <a href="{% url 'movie_list' %}" class="nav-item nav-link fa fa-film">Movies</a>
                     <a href="{% url 'videoplayer' %}" class="nav-item nav-link fa fa-film">VideoPlayer</a>
@@ -173,22 +173,8 @@
                             <a href="{% url 'movie_category' 'romance' %}" class="dropdown-item">Romance</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle fa fa-fill">Year</a>
-                        <div class="dropdown-menu">					
-                            <a href="{% url 'movie_year' '2020' %}" class="dropdown-item">2020</a>
-                            <a href="{% url 'movie_year' '2019' %}" class="dropdown-item">2019</a>
-                            <a href="{% url 'movie_year' '2018' %}" class="dropdown-item">2018</a>
-                            <a href="{% url 'movie_year' '2017' %}" class="dropdown-item">2017</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle fa fa-fill">Language</a>
-                        <div class="dropdown-menu">					
-                            <a href="{% url 'movie_language' 'english' %}" class="dropdown-item">English</a>
-                            <a href="{% url 'movie_language' 'german' %}" class="dropdown-item">German</a>
-                        </div>
-                    </div>
+                    <a href="{% url 'watched_movie' %}" class="nav-item nav-link fa fa-film">Watched</a>
+                    <a href="{% url 'search_external_torrents' %}" class="nav-item nav-link fa fa-search">Search</a>
                     <form class="navbar-form form-inline ml-auto" method="GET" action="{% url 'search' %}">
                         <div class="input-group search-box">
                             <input type="text" name="query" value="{{ request.GET.query }}" class="form-control">
@@ -201,7 +187,6 @@
                     <a href="{% url 'logoutUser' %}" class="nav-item nav-link fa fa-sign-out" style="color: #007bff; float:right;">Logout</a>	
                 {% else %}
                         <a href="{% url 'login2' %}" class="nav-item nav-link fa fa-sign-in">Login</a>
-                        <a href="{% url 'register' %}" class="nav-item nav-link fa fa-sign-up">Signup</a>
                     {% endif %}
                 </div>
             </div>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .icon-42{
+        background-image : url(../static/images/42.png);
+        background-size: cover;
+        display: inline-block;
+        height: 27px;
+        margin: 8px 11px 4px 8px;
+        width: 38px;
+    }
+</style>
+<div class="login-container text-c animated flipInX">
+    <p class="text-whitesmoke" style="color:#007bff;">Click the logo to Authorize 42 login</p>
+    <div class="container-content">
+            <a href="https://api.intra.42.fr/oauth/authorize?client_id=c4504b0c67190db0c8756ba8c42c9f81e64bbdcc2815fa42144585a58dde47f2&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Flogin42.html&response_type=code">
+                <button type="submit" class="btn btn-default"><i class="fab icon-42" aria-hidden="true"></i></button>
+            </a>
+            </div>
+</div>
+{% endblock %}

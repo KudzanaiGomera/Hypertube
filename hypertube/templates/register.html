@@ -1,36 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<style>
-    .icon-42{
-        background-image : url(../static/images/42.png);
-        background-size: cover;
-        display: inline-block;
-        height: 27px;
-        margin: 8px 11px 4px 8px;
-        width: 38px;
-    }
-    .google{
-        background-image : url(../static/images/google.png);
-        background-size: cover;
-        display: inline-block;
-        height: 29px;
-        margin: 8px 11px 4px 8px;
-        width: 30px;
-    }
-    .github{
-        background-image : url(../static/images/github.png);
-        background-size: cover;
-        display: inline-block;
-        height: 29px;
-        margin: 8px 11px 4px 8px;
-        width: 30px;
-    }
-</style>
 <div class="login-container text-c animated flipInX">
-    <div>
-        <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
-    </div>
         <p class="text-whitesmoke">Sign Up</p>
     <div class="container-content">
         <form class="margin-t" method="POST" action="">
@@ -56,17 +27,7 @@
             <button type="submit" class="form-button button-l margin-b">Sign Up</button>
         </form>
         <br>
-         <p class="text-darkyellow" style="color: red;"> Or Sign UP With</p>
-            <a href="{% url 'social:begin' 'github' %}">
-                <button type="submit" class="btn btn-default"><i class="github" aria-hidden="true"></i></button>
-            </a>
-            <a href="{% url 'social:begin' 'google-oauth2' %}">
-                <button type="submit" class="btn btn-default"><i class="google" aria-hidden="true"></i></button>
-            </a>
-            <a href="https://api.intra.42.fr/oauth/authorize?client_id=c4504b0c67190db0c8756ba8c42c9f81e64bbdcc2815fa42144585a58dde47f2&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000&response_type=code">
-                <button type="submit" class="btn btn-default"><i class="fab icon-42" aria-hidden="true"></i></button>
-            </a>
-            <br>
+        <p>Already registered? click the link below</p>
         <a class="text-darkyellow" href="{% url 'login2' %}" style="font-size: 20px;"><small>Sign In</small></a>
         <br>
         <p style = "color: red;">

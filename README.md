@@ -18,6 +18,12 @@ $ cd hypertube
 
 $ sh import.sh
 
+$ pip3 install -r requirements
+
+$ python3 manage.py makemigrations
+
+$ python3 manage.py migration
+
 $ python3 manager.py runserver
 
 

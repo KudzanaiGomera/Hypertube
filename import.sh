@@ -17,3 +17,11 @@ pip3 install social-auth-app-django
 pip3 install django-allauth
 
 pip3 install bcrypt
+
+pip3 install pyYify
+
+pip3 install beautifulsoup4
+
+pip3 install lxml
+
+pip3 install djangorestframework

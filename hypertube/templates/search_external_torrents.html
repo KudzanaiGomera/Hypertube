@@ -1,0 +1,20 @@
+{% extends 'movies.html' %}
+
+{% block content %}
+
+<main class="content">
+    <div class="single">
+        <form class="navbar-form form-inline ml-auto" method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="input-group search-box">
+                <input type="text" name="movie" value="" class="form-control" required>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-danger"><span>Search</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock %}  
