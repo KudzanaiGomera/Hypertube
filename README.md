@@ -26,6 +26,8 @@ $ python3 manage.py migration
 
 $ python3 manager.py runserver
 
+$ make sure you have mysql server running for db. if you have phpmyadmin (on windows drage the hypertube folder inside htdocs)(on linux just run your server)
+
 
 # Used MVT
 
@@ -58,3 +60,13 @@ $ python3 manager.py runserver
     - related movies
 
 - search
+- Download torrent
+- stream torrent
+- search from external sources
+
+
+![Hypertube Image](./screenshot1.png)
+![Hypertube Image](./screenshot2.png)
+![Hypertube Image](./screenshot3.png)
+![Hypertube Image](./screenshot4.png)
+![Hypertube Image](./screenshot5.png)
