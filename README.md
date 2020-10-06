@@ -65,8 +65,8 @@ $ make sure you have mysql server running for db. if you have phpmyadmin (on win
 - search from external sources
 
 
-![Hypertube Image](./screenshot1.png)
-![Hypertube Image](./screenshot2.png)
-![Hypertube Image](./screenshot3.png)
-![Hypertube Image](./screenshot4.png)
-![Hypertube Image](./screenshot5.png)
+![Hypertube Image](./Screenshot1.png)
+![Hypertube Image](./Screenshot2.png)
+![Hypertube Image](./Screenshot3.png)
+![Hypertube Image](./Screenshot4.png)
+![Hypertube Image](./Screenshot5.png)
