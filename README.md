@@ -67,6 +67,6 @@ $ make sure you have mysql server running for db. if you have phpmyadmin (on win
 
 ![Hypertube Image](./Screenshot1.png)
 ![Hypertube Image](./Screenshot2.png)
-![Hypertube Image](./Screenshot3.png)
+![Hypertube Image](./Screenshot 3.png)
 ![Hypertube Image](./Screenshot4.png)
-![Hypertube Image](./Screenshot5.png)
+![Hypertube Image](./Screenshot 5.png)
