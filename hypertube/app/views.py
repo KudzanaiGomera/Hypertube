@@ -339,7 +339,7 @@ def login42(request):
     print(code)
     r = requests.post('https://api.intra.42.fr/oauth/token', data={
             'grant_type': 'authorization_code',
-            'client_id': 'Your intranet app CLIENT_ID',
+            'client_id': 'c4504b0c67190db0c8756ba8c42c9f81e64bbdcc2815fa42144585a58dde47f2',
             'client_secret': 'Your intranet app CLIENT_SECRET',
             'code': code,
             'redirect_uri': 'http://127.0.0.1:8000/login42.html'
